@@ -11,12 +11,9 @@ function App() {
     new Todo('Learn React'),
     new Todo('Learn TypeScript'),
   ];
-
-  <NewTodo />
-
-
   return (
     <div>
+      <NewTodo />
       <Todos items={todos}/>
     </div>
   );
