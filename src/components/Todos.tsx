@@ -1,10 +1,14 @@
-// import React from "react";
+import React from "react";
 
-function Todos() {
+// React.FC: Functional Component
+const Todos: React.FC<{
+    [x:string]:React.ReactNode ; items: string[]
+}> = (props) => {
     return (
         <ul>
-            <li>Learn React</li>
-            <li>Learn Typescript</li>
+            {props.items.map((item) => (
+                <li key={item}>{item}</li>
+            ))}
         </ul>
     );
 }
